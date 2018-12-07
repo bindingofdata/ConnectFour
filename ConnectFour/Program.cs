@@ -18,34 +18,31 @@ namespace ConnectFour
             
             while (keepPlaying)
             {
-                while (userInput != "e")
-                {
-                    Console.Clear();
-                    Console.Write(PrintMenu());
-                    userInput = Console.ReadLine().ToLower();
+                Console.Clear();
+                Console.Write(PrintMenu());
+                userInput = Console.ReadLine().ToLower();
 
-                    switch (userInput)
-                    {
-                        case "n":
-                        case "1":
-                            NewGame();
-                            break;
-                        case "h":
-                        case "2":
-                            DisplayHelp();
-                            break;
-                        case "e":
-                        case "q":
-                        case "3":
-                            keepPlaying = false;
-                            break;
-                        default:
-                            Console.Clear();
-                            Console.WriteLine("Invalid input. Please provide an option from the menu.\n");
-                            Console.Write("press any key to continue...");
-                            Console.ReadKey();
-                            break;
-                    }
+                switch (userInput)
+                {
+                    case "n":
+                    case "1":
+                        NewGame();
+                        break;
+                    case "h":
+                    case "2":
+                        DisplayHelp();
+                        break;
+                    case "e":
+                    case "q":
+                    case "3":
+                        keepPlaying = false;
+                        break;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Invalid input. Please provide an option from the menu.\n");
+                        Console.Write("press any key to continue...");
+                        Console.ReadKey();
+                        break;
                 }
             }
         }
